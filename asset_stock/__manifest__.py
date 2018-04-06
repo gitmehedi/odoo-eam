@@ -25,7 +25,7 @@ Keep one entity in one place for escape mistakes!
     'demo': ['asset_demo.xml'],
     'data': [
         'security/ir.model.access.csv',
-        'stock_view.xml'
+        'views/stock_view.xml'
     ],
     'installable': True,
 }

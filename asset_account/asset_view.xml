@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
-	<data>
+    <data>
 
         <record id="assets_form_view" model="ir.ui.view">
             <field name="name">account.asset.asset.form.inherit</field>
@@ -9,15 +9,14 @@
             <field name="arch" type="xml">
                 <data>
                     <field name="category_id" position="before" version="7.0">
-                        <field name="asset_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+
+                        <field name="location_id" attrs="{'readonly':[('state','!=','draft')]}"
+                               options="{'no_create':True,'no_create_edit':True,'no_open':True}"/>
                     </field>
-                    <label for="name" position="replace"/>
-                    <field name="name" position="attributes">
-                        <attribute name="invisible">1</attribute>
-                    </field>
+
                 </data>
             </field>
         </record>
-        
- 	</data>
+
+    </data>
 </openerp>

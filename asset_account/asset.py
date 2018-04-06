@@ -12,7 +12,8 @@ from odoo import api, fields, models
 class AccountAssetAsset(models.Model):
     _inherit = 'account.asset.asset'
 
-    asset_id = fields.Many2one('asset.asset', 'Asset', required=True)
+    # asset_id = fields.Many2one('asset.asset', 'Asset', required=True)
+    location_id = fields.Many2one('stock.location', domain=[('usage', '=', 'asset'), ('active', '=', True)])
 
     @api.onchange('asset_id')
     def onchange_asset(self):
